@@ -3,7 +3,7 @@ package br.edu.ulbra.election.candidate.model;
 import javax.persistence.*;
 //string name  /  Long partyId /  Long numberElection / Long electionId 
 @Entity
-public class Voter {
+public class Candidate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
