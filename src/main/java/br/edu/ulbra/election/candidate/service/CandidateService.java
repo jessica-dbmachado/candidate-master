@@ -151,7 +151,7 @@ candidate.setElectionId(candidateInput.getElectionId());
       
   return new GenericOutput("Candidate deleted");
   
-  }
+    }
 
     private void validateInput(CandidateInput candidateInput, boolean isUpdate){
      
@@ -159,7 +159,7 @@ candidate.setElectionId(candidateInput.getElectionId());
             throw new GenericOutputException("Invalid name");
         }
 
-   if (StringUtils.isBlank(candidateInput.getPartyId())){
+   if (candidateInput.getPartyId()==null){
             throw new GenericOutputException("Invalid Party");
     }
 
