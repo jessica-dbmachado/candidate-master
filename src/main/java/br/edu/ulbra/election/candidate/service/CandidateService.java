@@ -50,7 +50,7 @@ public class CandidateService {
  @Autowired
     public CandidateService(CandidateRepository CandidateRepository, ModelMapper modelMapper){
       
-  this.candidateRepository = candidateRepository;
+  this.candidateRepository = CandidateRepository;
   
       this.modelMapper = modelMapper;
    
@@ -66,7 +66,7 @@ public class CandidateService {
 
   }
 
-    public CandidateOutput create(CandidateInput CandidateInput)
+    public CandidateOutput create(CandidateInput candidateInput)
  {
         
 validateInput(candidateInput, false);
@@ -164,11 +164,11 @@ candidate.setElectionId(candidateInput.getElectionId());
     }
 
 
-   if (StringUtils.isBlank(candidateInput.getNumberElection())){
+   if (candidateInput.getNumberElection()==0){
             throw new GenericOutputException("Invalid Number Election");
     }
-   if (StringUtils.isBlank(candidateInput.getElectionId())){
+   if (candidateInput.getElectionId()==null){
             throw new GenericOutputException("Invalid ElectionId");
     } 
-   
+    }}
                         
