@@ -48,9 +48,9 @@ public class CandidateService {
 
    
  @Autowired
-    public CandidateService(CandidateRepository CandidateRepository, ModelMapper modelMapper){
+    public CandidateService(CandidateRepository candidateRepository, ModelMapper modelMapper){
       
-  this.candidateRepository = CandidateRepository;
+  this.candidateRepository = candidateRepository;
   
       this.modelMapper = modelMapper;
    
