@@ -158,6 +158,10 @@ candidate.setElectionId(candidateInput.getElectionId());
    if (StringUtils.isBlank(candidateInput.getName())){
             throw new GenericOutputException("Invalid name");
         }
+   
+   if (candidateInput.getName().length() < 5){
+       throw new GenericOutputException("Short name, must have more than 5 letters");
+   }
 
    if (candidateInput.getPartyId()==null){
             throw new GenericOutputException("Invalid Party");

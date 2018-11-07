@@ -17,6 +17,9 @@ public class CandidateOutput {
     @ApiModelProperty(notes = "Candidate Party Data")
     private PartyOutput partyOutput;
 
+    ElectionOutput election;
+    PartyOutput party;
+    
     public String getName() {
         return name;
     }
