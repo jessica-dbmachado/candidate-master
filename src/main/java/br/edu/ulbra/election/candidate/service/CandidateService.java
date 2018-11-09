@@ -174,5 +174,17 @@ candidate.setElectionId(candidateInput.getElectionId());
    if (candidateInput.getElectionId()==null){
             throw new GenericOutputException("Invalid ElectionId");
     } 
-    }}
+   
+   //validate if has lastname
+   if(candidateInput.getName().indexOf(" ") == -1){
+   	{
+   		throw new GenericOutputException("Please add your last name as well, candidate");
+   	}
+   }
+   
+    }
+    
+
+
+}
                         
