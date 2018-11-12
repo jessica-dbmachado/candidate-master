@@ -1,7 +1,7 @@
 package br.edu.ulbra.election.candidate.model;
 
 import javax.persistence.*;
-//string name  /  Long partyId /  Long numberElection / Long electionId 
+
 @Entity
 public class Candidate {
 
@@ -13,13 +13,13 @@ public class Candidate {
     private String name;
 
     @Column(nullable = false)
-    private Long partyId;
+    private Long numberElection;
 
     @Column(nullable = false)
-    private Long numberElection;
-	
-	@Column(nullable = false)
     private Long electionId;
+
+    @Column(nullable = false)
+    private Long partyId;
 
     public Long getId() {
         return id;
@@ -36,24 +36,16 @@ public class Candidate {
     public void setName(String name) {
         this.name = name;
     }
-	
-	    public Long getPartyId() {
-        return partyId;
-    }
 
-    public void setPartyId(Long partyId) {
-        this.partyId = partyId;
-    }
-	
-	public Long getNumberElection() {
+    public Long getNumberElection() {
         return numberElection;
     }
 
     public void setNumberElection(Long numberElection) {
         this.numberElection = numberElection;
     }
-	
-	public Long getElectionId() {
+
+    public Long getElectionId() {
         return electionId;
     }
 
@@ -61,5 +53,12 @@ public class Candidate {
         this.electionId = electionId;
     }
 
+    public Long getPartyId() {
+        return partyId;
+    }
+
+    public void setPartyId(Long partyId) {
+        this.partyId = partyId;
+    }
 
 }
