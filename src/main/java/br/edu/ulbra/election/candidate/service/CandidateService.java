@@ -120,6 +120,7 @@ public class CandidateService {
         }
 
         try{
+        
             PartyOutput partyOutput = partyClientService.getById(candidateInput.getPartyId());
             if (!candidateInput.getNumberElection().toString().startsWith(partyOutput.getNumber().toString())){
                 throw new GenericOutputException("Number doesn't belong to party");
