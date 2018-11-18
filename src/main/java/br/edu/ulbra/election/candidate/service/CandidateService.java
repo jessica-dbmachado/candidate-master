@@ -135,7 +135,7 @@ public class CandidateService {
             throw new GenericOutputException(MESSAGE_INVALID_ELECTION_ID);
         }
         try {
-            electionClientService.getById(candidateInput.getElectionId());
+            electionClientService.getById(candidateInput.getElectionId()); //here
         } catch (FeignException e){
             if (e.status() == 500) {
                 throw new GenericOutputException(MESSAGE_INVALID_ELECTION_ID);
